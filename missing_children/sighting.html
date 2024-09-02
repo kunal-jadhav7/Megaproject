@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Sighting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Submit Sighting</h1>
+    </header>
+
+    <main>
+        <form id="sightingForm" method="POST" action="add_sighting.php" enctype="multipart/form-data">
+            <label for="child_id">Select Missing Child:</label>
+            <select id="child_id" name="child_id" required>
+                <!-- This dropdown will be populated dynamically using JavaScript -->
+            </select>
+
+            <label for="location">Sighting Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="description">Description (optional):</label>
+            <textarea id="description" name="description"></textarea>
+
+            <label for="sighting_photo">Upload Photo (optional):</label>
+            <input type="file" id="sighting_photo" name="sighting_photo" accept="image/*">
+
+            <button type="submit">Submit Sighting</button>
+        </form>
+    </main>
+
+    <script src="sighting.js"></script>
+</body>
+</html>
